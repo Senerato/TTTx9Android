@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TTTGame"></activity>
+        <activity android:name=".TTTGame" />
+        <activity android:name=".Subgame"></activity>
     </application>
 
 </manifest>

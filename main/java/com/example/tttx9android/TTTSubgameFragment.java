@@ -1,15 +1,21 @@
 package com.example.tttx9android;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import static android.R.attr.duration;
 
 
-public class TTTSubgameFragment extends Fragment {
+public class TTTSubgameFragment extends Fragment{
+
+    private boolean subGameWon = false;
 
     public TTTSubgameFragment() {
         // Required empty public constructor
@@ -27,5 +33,4 @@ public class TTTSubgameFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_tttsubgame, container, false);
     }
-
 }
