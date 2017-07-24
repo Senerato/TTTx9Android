@@ -18,14 +18,14 @@ public class TTTGame extends AppCompatActivity {
             String s = "TTTSubgameFragment" + i;
 
             Fragment fragment = getFragmentManager().findFragmentByTag(s);
-            fragment.getView();
-//            fragment.getView().setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent intent = new Intent(TTTGame.this, Subgame.class);
-//                    startActivity(intent);
-//                }
-//            });
+            //fragment.getView();
+            fragment.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(TTTGame.this, Subgame.class);
+                    startActivity(intent);
+                }
+            });
         }
     }
 }
