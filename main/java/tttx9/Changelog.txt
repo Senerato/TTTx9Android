@@ -1,0 +1,15 @@
+Version 0.1.5 -> 0.1.6:
+
+Changes:
+
+
+
+Known bugs:
+
+
+
+Upcoming features:
+
+- The class Player should probably be an interface.
+- Better separate the model, view and controller.
+- Implement correct behaviour when a subgame ends in a draw.
