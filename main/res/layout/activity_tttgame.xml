@@ -4,7 +4,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.tttx9android.TTTGame">
+    tools:context="com.example.tttx9android.TTTGame"
+                                             android:id="@+id/ConstraintLayout">
+
+	<fragment
+		android:id="@+id/TTTSubgameFragment0"
+		android:name="com.example.tttx9android.TTTSubgameFragment"
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+
+		android:layout_marginTop="16dp"
+		android:tag="TTTSubgameFragment0"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toLeftOf="@+id/TTTSubgameFragment1"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:layout="@layout/fragment_tttsubgame"/>
+
+	<fragment
+		android:id="@+id/TTTSubgameFragment1"
+		android:tag="TTTSubgameFragment1"
+		android:name="com.example.tttx9android.TTTSubgameFragment"
+		android:layout_width="100dp"
+
+		android:layout_height="100dp"
+		android:layout_marginTop="16dp"
+		app:layout_constraintLeft_toRightOf="@+id/TTTSubgameFragment0"
+		app:layout_constraintRight_toLeftOf="@+id/TTTSubgameFragment2"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:layout="@layout/fragment_tttsubgame"/>
+
+	<fragment
+		android:id="@+id/TTTSubgameFragment2"
+		android:tag="TTTSubgameFragment2"
+		android:name="com.example.tttx9android.TTTSubgameFragment"
+		android:layout_width="100dp"
+
+		android:layout_height="100dp"
+		android:layout_marginTop="16dp"
+		app:layout_constraintLeft_toRightOf="@+id/TTTSubgameFragment1"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:layout="@layout/fragment_tttsubgame"/>
+
+	<fragment
+		android:id="@+id/TTTSubgameFragment3"
+		android:tag="TTTSubgameFragment3"
+		android:name="com.example.tttx9android.TTTSubgameFragment"
+		android:layout_width="100dp"
+
+		android:layout_height="100dp"
+		android:layout_marginTop="16dp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toLeftOf="@+id/TTTSubgameFragment4"
+		app:layout_constraintTop_toBottomOf="@+id/TTTSubgameFragment0"
+		tools:layout="@layout/fragment_tttsubgame"/>
+
+	<fragment
+		android:id="@+id/TTTSubgameFragment4"
+		android:tag="TTTSubgameFragment4"
+		android:name="com.example.tttx9android.TTTSubgameFragment"
+		android:layout_width="100dp"
+
+		android:layout_height="100dp"
+		android:layout_marginTop="16dp"
+		app:layout_constraintLeft_toRightOf="@+id/TTTSubgameFragment3"
+		app:layout_constraintRight_toLeftOf="@+id/TTTSubgameFragment5"
+		app:layout_constraintTop_toBottomOf="@+id/TTTSubgameFragment1"
+		tools:layout="@layout/fragment_tttsubgame"/>
+
+	<fragment
+		android:id="@+id/TTTSubgameFragment5"
+		android:tag="TTTSubgameFragment5"
+		android:name="com.example.tttx9android.TTTSubgameFragment"
+		android:layout_width="100dp"
+
+		android:layout_height="100dp"
+		android:layout_marginTop="16dp"
+		app:layout_constraintLeft_toRightOf="@+id/TTTSubgameFragment4"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/TTTSubgameFragment2"
+		tools:layout="@layout/fragment_tttsubgame"/>
+
+	<fragment
+		android:id="@+id/TTTSubgameFragment6"
+		android:tag="TTTSubgameFragment6"
+		android:name="com.example.tttx9android.TTTSubgameFragment"
+		android:layout_width="100dp"
+
+		android:layout_height="100dp"
+		android:layout_marginTop="16dp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toLeftOf="@+id/TTTSubgameFragment7"
+		app:layout_constraintTop_toBottomOf="@+id/TTTSubgameFragment3"
+		tools:layout="@layout/fragment_tttsubgame"/>
+
+	<fragment
+		android:id="@+id/TTTSubgameFragment7"
+		android:tag="TTTSubgameFragment7"
+		android:name="com.example.tttx9android.TTTSubgameFragment"
+		android:layout_width="100dp"
+
+		android:layout_height="100dp"
+		android:layout_marginTop="16dp"
+		app:layout_constraintLeft_toRightOf="@+id/TTTSubgameFragment6"
+		app:layout_constraintRight_toLeftOf="@+id/TTTSubgameFragment8"
+		app:layout_constraintTop_toBottomOf="@+id/TTTSubgameFragment4"
+		tools:layout="@layout/fragment_tttsubgame"/>
 
     <fragment
         android:id="@+id/TTTSubgameFragment8"
@@ -17,102 +122,23 @@
 
         app:layout_constraintLeft_toRightOf="@+id/TTTSubgameFragment7"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TTTSubgameFragment5" />
+        app:layout_constraintTop_toBottomOf="@+id/TTTSubgameFragment5"
+        tools:layout="@layout/fragment_tttsubgame"/>
 
-    <fragment
-        android:id="@+id/TTTSubgameFragment7"
-        android:tag="TTTSubgameFragment7"
-        android:name="com.example.tttx9android.TTTSubgameFragment"
-        android:layout_width="100dp"
 
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toRightOf="@+id/TTTSubgameFragment6"
-        app:layout_constraintRight_toLeftOf="@+id/TTTSubgameFragment8"
-        app:layout_constraintTop_toBottomOf="@+id/TTTSubgameFragment4" />
 
-    <fragment
-        android:id="@+id/TTTSubgameFragment6"
-        android:tag="TTTSubgameFragment6"
-        android:name="com.example.tttx9android.TTTSubgameFragment"
-        android:layout_width="100dp"
 
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/TTTSubgameFragment7"
-        app:layout_constraintTop_toBottomOf="@+id/TTTSubgameFragment3" />
 
-    <fragment
-        android:id="@+id/TTTSubgameFragment3"
-        android:tag="TTTSubgameFragment3"
-        android:name="com.example.tttx9android.TTTSubgameFragment"
-        android:layout_width="100dp"
 
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/TTTSubgameFragment4"
-        app:layout_constraintTop_toBottomOf="@+id/TTTSubgameFragment0" />
 
-    <fragment
-        android:id="@+id/TTTSubgameFragment4"
-        android:tag="TTTSubgameFragment4"
-        android:name="com.example.tttx9android.TTTSubgameFragment"
-        android:layout_width="100dp"
 
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toRightOf="@+id/TTTSubgameFragment3"
-        app:layout_constraintRight_toLeftOf="@+id/TTTSubgameFragment5"
-        app:layout_constraintTop_toBottomOf="@+id/TTTSubgameFragment1" />
 
-    <fragment
-        android:id="@+id/TTTSubgameFragment5"
-        android:tag="TTTSubgameFragment5"
-        android:name="com.example.tttx9android.TTTSubgameFragment"
-        android:layout_width="100dp"
 
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toRightOf="@+id/TTTSubgameFragment4"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TTTSubgameFragment2" />
 
-    <fragment
-        android:id="@+id/TTTSubgameFragment1"
-        android:tag="TTTSubgameFragment1"
-        android:name="com.example.tttx9android.TTTSubgameFragment"
-        android:layout_width="100dp"
 
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toRightOf="@+id/TTTSubgameFragment0"
-        app:layout_constraintRight_toLeftOf="@+id/TTTSubgameFragment2"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <fragment
-        android:id="@+id/TTTSubgameFragment0"
-        android:tag="TTTSubgameFragment0"
-        android:name="com.example.tttx9android.TTTSubgameFragment"
-        android:layout_width="100dp"
 
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/TTTSubgameFragment1"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <fragment
-        android:id="@+id/TTTSubgameFragment2"
-        android:tag="TTTSubgameFragment2"
-        android:name="com.example.tttx9android.TTTSubgameFragment"
-        android:layout_width="100dp"
 
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toRightOf="@+id/TTTSubgameFragment1"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
