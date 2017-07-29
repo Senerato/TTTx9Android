@@ -1,7 +1,4 @@
-package tttx9.tttx9;
-
-import tttx9.tttx9.GameState;
-import tttx9.tttx9.Move;
+package engine.tttx9;
 
 /**
  * 

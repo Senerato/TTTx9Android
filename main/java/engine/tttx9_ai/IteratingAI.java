@@ -1,8 +1,8 @@
-package tttx9.tttx9_ai;
+package engine.tttx9_ai;
 
-import tttx9.tttx9.GameState;
-import tttx9.tttx9.Move;
-import tttx9.tttx9.Player;
+import engine.tttx9.GameState;
+import engine.tttx9.Move;
+import engine.tttx9.Player;
 
 /**
  * 

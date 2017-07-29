@@ -1,4 +1,4 @@
-package tttx9.tttx9;
+package engine.tttx9;
 
 /**
  * 
@@ -12,8 +12,8 @@ public class View {
 	 * Move to show.
 	 * @param newGameState
 	 */
-	public void updateUi(tttx9.tttx9.TTTx9Game newTTTx9Game, tttx9.tttx9.GameState newGameState) {
-		if (newTTTx9Game.getGameResult() == tttx9.tttx9.GameResult.UNFINISHED) {
+	public void updateUi(engine.tttx9.TTTx9Game newTTTx9Game, engine.tttx9.GameState newGameState) {
+		if (newTTTx9Game.getGameResult() == engine.tttx9.GameResult.UNFINISHED) {
 			System.out.println("It is now player " + newTTTx9Game.getPlayerTurn() + "'s turn.");
 		}
 		System.out.println("\n" + newGameState.toString());

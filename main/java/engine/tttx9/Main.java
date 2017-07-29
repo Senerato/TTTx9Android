@@ -1,9 +1,6 @@
-package tttx9.tttx9;
+package engine.tttx9;
 
-import tttx9.tttx9.Controller;
-import tttx9.tttx9.HumanPlayer;
-import tttx9.tttx9.TTTx9Game;
-import tttx9.tttx9_ai.IteratingAI;
+import engine.tttx9_ai.IteratingAI;
 
 /**
  * 

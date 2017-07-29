@@ -1,5 +1,6 @@
-package tttx9.tttx9;
+package engine.tttx9;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -7,24 +8,25 @@ import java.util.ArrayList;
  * @author Senerato.
  * Het model: ontvangt een player en managed de zetten.
  */
-public class TTTx9Game {
-	private ArrayList<tttx9.tttx9.Player> players = new ArrayList<tttx9.tttx9.Player>();
-	private tttx9.tttx9.Player hasTurn;
-	private tttx9.tttx9.GameState gs;
-	private tttx9.tttx9.Player winner;
-	private tttx9.tttx9.GameResult gameResult = tttx9.tttx9.GameResult.UNFINISHED;
+public class TTTx9Game
+{
+	private ArrayList<engine.tttx9.Player> players = new ArrayList<engine.tttx9.Player>();
+	private engine.tttx9.Player hasTurn;
+	private engine.tttx9.GameState gs;
+	private engine.tttx9.Player winner;
+	private engine.tttx9.GameResult gameResult = engine.tttx9.GameResult.UNFINISHED;
 
 	/**
 	 * Initiate ga game with two players.
 	 * @param p1 player 1.
 	 * @param p2 player 2.
 	 */
-	public TTTx9Game(tttx9.tttx9.Player p1, tttx9.tttx9.Player p2) {
+	public TTTx9Game(engine.tttx9.Player p1, engine.tttx9.Player p2) {
 		p1.setId(1);
 		p2.setId(2);
 		this.players.add(p1);
 		this.players.add(p2);
-		this.gs = new tttx9.tttx9.GameState();
+		this.gs = new engine.tttx9.GameState();
 		this.hasTurn = players.get((int) (Math.random() * 2)); // Specifies the player that currently
 	}
 
@@ -33,7 +35,7 @@ public class TTTx9Game {
 	 * while printing the game status.
 	 */
 	public void play() {
-		while(gameResult == tttx9.tttx9.GameResult.UNFINISHED) {
+		while(gameResult == engine.tttx9.GameResult.UNFINISHED) {
 			System.out.println(hasTurn + " performs turn");
 			performTurn();
 			checkGameStatus();
@@ -49,17 +51,17 @@ public class TTTx9Game {
 	 */
 	private void checkGameStatus() {	
 		// Check whether the game is finished:
-		if (gs.checkForWinner(hasTurn) == tttx9.tttx9.GameResult.VICTORY) {
-			this.gameResult = tttx9.tttx9.GameResult.VICTORY;
+		if (gs.checkForWinner(hasTurn) == engine.tttx9.GameResult.VICTORY) {
+			this.gameResult = engine.tttx9.GameResult.VICTORY;
 			this.winner = hasTurn;
 			System.out.println(winner + " won the game!");
 		}
 		if (gs.allFieldsTaken())
-			this.gameResult = tttx9.tttx9.GameResult.DRAW;
+			this.gameResult = engine.tttx9.GameResult.DRAW;
 	}
 
 
-	public tttx9.tttx9.GameResult getGameResult() {
+	public engine.tttx9.GameResult getGameResult() {
 		return this.gameResult;
 	}
 
@@ -67,7 +69,7 @@ public class TTTx9Game {
 	 * Performs a turn.
 	 */
 	private void performTurn() {
-		tttx9.tttx9.Move nextMove = nextPlayerMove();
+		engine.tttx9.Move nextMove = nextPlayerMove();
 		gs.submitMove(nextMove, hasTurn);
 	}
 
@@ -76,9 +78,9 @@ public class TTTx9Game {
 	 * performs.
 	 * @return the move the next player performs
 	 */
-	private tttx9.tttx9.Move nextPlayerMove() {
+	private engine.tttx9.Move nextPlayerMove() {
 		String s = null;
-		tttx9.tttx9.Move nextMove;
+		engine.tttx9.Move nextMove;
 		if (hasTurn.getId() == 1) {
 			if (gs.getLastMove() == null || gs.getNextSubGame().getWinner() != null)
 				nextMove = players.get(0).nextFreeTurn(gs);
@@ -97,8 +99,11 @@ public class TTTx9Game {
 		return nextMove;
 	}
 
-	public tttx9.tttx9.Player getPlayerTurn() {
+	public engine.tttx9.Player getPlayerTurn() {
 		return this.hasTurn;
 	}
 
+	public GameState getGameState() {
+		return gs;
+	}
 }

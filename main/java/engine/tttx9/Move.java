@@ -1,6 +1,4 @@
-package tttx9.tttx9;
-
-import tttx9.tttx9.Coord;
+package engine.tttx9;
 
 /**
  * 

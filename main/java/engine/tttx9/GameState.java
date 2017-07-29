@@ -1,4 +1,4 @@
-package tttx9.tttx9;
+package engine.tttx9;
 
 import java.util.ArrayList;
 
@@ -57,7 +57,7 @@ public class GameState {
 		return getOwner(move.getSubGame(), move.getSingleField()) == 0;
 	}
 
-	public SubGame[] getState() {
+	public SubGame[] getSubGames() {
 		return this.subGames;
 	}
 

@@ -1,4 +1,4 @@
-package tttx9.tttx9;
+package engine.tttx9;
 
 public class Coord {
 

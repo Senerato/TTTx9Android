@@ -1,10 +1,6 @@
-package tttx9.tttx9;
+package engine.tttx9;
 
 import java.util.ArrayList;
-
-import tttx9.tttx9.Coord;
-import tttx9.tttx9.Move;
-import tttx9.tttx9.Player;
 
 /**
  * 
@@ -14,7 +10,7 @@ import tttx9.tttx9.Player;
 public class SubGame {
 	private int id; // The id of this subGame.
 	private int[] subGameState = new int[9]; // All fields have an owner, 0 for no owner, 1 for player 1, 2 for player 2.
-	private tttx9.tttx9.Player winner = null; //The winner of this subGame.
+	private engine.tttx9.Player winner = null; //The winner of this subGame.
 
 	public SubGame() {
 		for (int owner: subGameState)
